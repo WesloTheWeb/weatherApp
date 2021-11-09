@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
+import Forecast from '../containers/Forecast/ForeCast';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Weather App</a>
         </h1>
       </main>
+      <Forecast />
       <Footer />
     </div>
   )
-}
+};
