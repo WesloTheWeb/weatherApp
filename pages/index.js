@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import Forecast from '../containers/Forecast/ForeCast';
-import classes from '../styles/Home.module.css';
 
 export default function Home() {
   return (
