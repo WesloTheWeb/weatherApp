@@ -12,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1> Welcome to <span className="title">Weather App</span></h1>
+        <h1> Welcome to the <br /><span className="title">Weather App</span></h1>
+        <p className="instructions">To use, simply enter a location on the input below and click the button or press 'enter' and the field should populate.</p>
         <LocationInput />
         <Forecast />
         <Footer />

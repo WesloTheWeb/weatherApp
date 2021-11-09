@@ -1,4 +1,6 @@
 .forecastCard {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     margin: 0 auto;
     text-align: center;
@@ -14,7 +16,6 @@
 }
 
 .cityBlock {
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: .75rem .5rem;
@@ -23,10 +24,17 @@
 }
 
 .weatherBlock {
-    position: absolute;
-    right: 10rem;
+    text-align: left;
 }
 
 .weatherBlock h3 {
     font-size: 5rem;
+    margin: 0;
+}
+
+.weatherBlockDetails {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;    
+    padding: 1.2rem;
+    margin: 1rem 0;
 }
