@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Footer from '../components/Footer/Footer';
-import Forecast from '../containers/Forecast/ForeCast';
-import LocationInput from '../containers/LocationInput/LocationInput';
+import Footer from '../src/components/Footer/Footer';
+import Forecast from '../src/containers/Forecast/ForeCast';
+import LocationInput from '../src/containers/LocationInput/LocationInput';
 
 export default function Home() {
   return (
