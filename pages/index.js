@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import Forecast from '../containers/Forecast/ForeCast';
+import LocationInput from '../containers/LocationInput/LocationInput';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <h1> Welcome to <span className="title">Weather App</span></h1>
       </main>
+      <LocationInput />
       <Forecast />
       <Footer />
     </div>
