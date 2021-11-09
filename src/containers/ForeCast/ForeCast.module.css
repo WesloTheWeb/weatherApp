@@ -1,0 +1,17 @@
+.forecastContainer {
+    background-image: url('../../../public/images/daytime-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    border: 2px solid #000;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.upcomingGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1.5rem;
+    margin-top: 5rem;
+}

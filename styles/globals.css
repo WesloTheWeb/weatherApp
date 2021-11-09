@@ -1,8 +1,15 @@
+:root {
+  --white: #FFF;
+  --fontColor: #FFF;
+  --backgroundColor: #000;
+}
+
 html,
 body {
-  background-color: #e1e4e5;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
   padding: 0;
-  margin: 0;
+  margin: 0 2rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -15,3 +22,22 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.title {
+  color: #0070f3;
+}
+
+h1 {
+  color: var(--white);
+  text-align: center;
+}
+
+.instructions {
+  text-align: center;
+}
+
+/* main {
+  background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+} */
+
+ 

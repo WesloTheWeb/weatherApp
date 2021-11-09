@@ -1,0 +1,27 @@
+.inputContainer {
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inputContainer input {
+    padding: .5rem;
+}
+
+.inputContainer input:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.inputContainer button {
+    background-color: #008F17;
+    color: #FFF;
+    font-weight: bold;
+    padding: .5rem;
+    border: none;
+    margin: 0 1rem;
+}
+
+.inputContainer button:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}

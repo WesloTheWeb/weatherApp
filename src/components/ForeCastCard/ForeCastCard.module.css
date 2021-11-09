@@ -1,0 +1,40 @@
+.forecastCard {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.forecastCard p, .forecastCard h2, .forecastCard h3 {
+    color: var(--white);
+}
+
+.forecastCard h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.cityBlock {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: .75rem .5rem;
+    border-radius: 15px;    
+    /* linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
+}
+
+.weatherBlock {
+    text-align: left;
+}
+
+.weatherBlock h3 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.weatherBlockDetails {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;    
+    padding: 1.2rem;
+    margin: 1rem 0;
+}
