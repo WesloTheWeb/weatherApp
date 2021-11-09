@@ -13,10 +13,10 @@ export default function Home() {
       </Head>
       <main>
         <h1> Welcome to <span className="title">Weather App</span></h1>
+        <LocationInput />
+        <Forecast />
+        <Footer />
       </main>
-      <LocationInput />
-      <Forecast />
-      <Footer />
     </div>
   )
 };

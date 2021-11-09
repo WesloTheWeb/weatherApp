@@ -12,11 +12,11 @@ const Forecast = (props) => {
     }
     const weatherURL = `${params.baseURL}&appid=${params.apiKey}`;
 
-    useEffect(() => {
-        fetch(weatherURL)
-            .then( res => res.json())
-            .then(result => console.log(result))
-    });
+    // useEffect(() => {
+    //     fetch(weatherURL)
+    //         .then( res => res.json())
+    //         .then(result => console.log(result))
+    // });
 
     return (
         <section className={forecastContainer}>

@@ -1,4 +1,32 @@
 .forecastCard {
+    position: relative;
     margin: 0 auto;
     text-align: center;
+}
+
+.forecastCard p, .forecastCard h2, .forecastCard h3 {
+    color: var(--white);
+}
+
+.forecastCard h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.cityBlock {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: .75rem .5rem;
+    border-radius: 15px;    
+    /* linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
+}
+
+.weatherBlock {
+    position: absolute;
+    right: 10rem;
+}
+
+.weatherBlock h3 {
+    font-size: 5rem;
 }

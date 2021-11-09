@@ -6,7 +6,7 @@ const { inputContainer } = classes;
 const LocationInput = (props) => {
     return (
         <form className={inputContainer}>
-            <input placeholder="city, zip" />
+            <input placeholder="city, zip, state, or country" />
             <button>Get Forecast</button>
         </form>
     );
