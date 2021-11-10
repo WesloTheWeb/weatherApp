@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { QueryContext } from '../../context/QueryContext';
 import classes from './LocationInput.module.css';
 
@@ -11,14 +11,15 @@ const LocationInput = (props) => {
         baseURL: "http://api.weatherapi.com/v1/",
         q: 53222,
     }
-    // const currentWeather = `${api.baseURL}current.json?key=${api.apiKey}&q="San%20Francisco"&aqi=no`;
 
-    const { setQuery, query, weather } = useContext(QueryContext);
-    // const forecastWeather = `${api.baseURL}forecast.json?key=${api.apiKey}&q=${query}&aqi=no`;
+    const currentWeather = `${api.baseURL}current.json?key=${api.apiKey}&q="San%20Francisco"&aqi=no`;
+
+    const { setQuery, query, setWeather } = useContext(QueryContext);
 
     const handleQuery = (evnt) => {
         if (evnt.key === 'Enter') {
-            fetch(`${api.baseURL}forecast.json?key=${api.apiKey}&q=${query}&aqi=no`)
+            fetch(`${api.baseURL}current.json?key=${api.apiKey}&q=${query}}&aqi=no`)
+                // fetch(currentWeather)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
@@ -29,7 +30,7 @@ const LocationInput = (props) => {
     };
 
     return (
-        <form className={inputContainer}>
+        <div className={inputContainer}>
             <input
                 type="text"
                 placeholder="city, zip, state, or country"
@@ -37,7 +38,7 @@ const LocationInput = (props) => {
                 value={query}
                 onKeyPress={handleQuery} />
             <button>Get Forecast</button>
-        </form>
+        </div>
     );
 };
 
