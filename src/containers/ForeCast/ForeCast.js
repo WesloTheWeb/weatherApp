@@ -14,7 +14,16 @@ const Forecast = (props) => {
         <section className={forecastContainer}>
             {(typeof weather.location != 'undefined') ? (
                 <>
-                    <ForeCastCard city={weather.location.name} />
+                    <ForeCastCard 
+                        city={weather.location.name} 
+                        state={weather.location.region} 
+                        country={weather.location.country}
+                        weatherFahrenheight={weather.current.temp_f}
+                        weatherCelsius={weather.current.temp_c} 
+                        timeZone={weather.location.localtime}
+                        aqCarbonLevels={weather.current.air_quality.co}
+                        aqOxygenLevels={weather.current.air_quality.o3}
+                        />
                     <div className={upcomingGrid}>
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />

@@ -18,7 +18,7 @@
 .cityBlock {
     background-color: rgba(0, 0, 0, 0.2);
     text-align: left;
-    padding: .75rem .5rem;
+    padding: .75rem 3rem;
     border-radius: 15px;    
     /* linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
 }
@@ -28,7 +28,7 @@
 }
 
 .weatherBlock h3 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
 }
 
