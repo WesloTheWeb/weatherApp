@@ -8,28 +8,33 @@ const { forecastContainer, upcomingGrid } = classes;
 
 const Forecast = (props) => {
 
-    const {weather} = useContext(QueryContext);
+    const { weather } = useContext(QueryContext);
 
     return (
         <section className={forecastContainer}>
-            <ForeCastCard  />
-            <div className={upcomingGrid}>
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
-                <UpcomingForeCastCard />
+            {(typeof weather.location != 'undefined') ? (
+                <>
+                    <ForeCastCard city={weather.location.name} />
+                    <div className={upcomingGrid}>
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                        <UpcomingForeCastCard />
+                    </div>
+                </>
+            ) : ('')
+            }
 
-            </div>
         </section>
     );
 };
