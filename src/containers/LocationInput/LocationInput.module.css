@@ -5,23 +5,12 @@
 }
 
 .inputContainer input {
+    width: 50%;
     padding: .5rem;
 }
 
 .inputContainer input:focus {
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.inputContainer button {
-    background-color: #008F17;
-    color: #FFF;
-    font-weight: bold;
-    padding: .5rem;
-    border: none;
-    margin: 0 1rem;
-}
-
-.inputContainer button:hover {
-    cursor: pointer;
-    background-color: darkgreen;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    border: 2px solid red;
+    outline: lightskyblue;
 }

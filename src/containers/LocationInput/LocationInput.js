@@ -12,14 +12,11 @@ const LocationInput = (props) => {
         q: 53222,
     }
 
-    const currentWeather = `${api.baseURL}current.json?key=${api.apiKey}&q="San%20Francisco"&aqi=no`;
-
     const { setQuery, query, setWeather } = useContext(QueryContext);
 
     const handleQuery = (evnt) => {
         if (evnt.key === 'Enter') {
             fetch(`${api.baseURL}current.json?key=${api.apiKey}&q=${query}}&aqi=yes`)
-                // fetch(currentWeather)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
@@ -37,7 +34,6 @@ const LocationInput = (props) => {
                 onChange={e => setQuery(e.target.value)}
                 value={query}
                 onKeyPress={handleQuery} />
-            <button>Get Forecast</button>
         </div>
     );
 };

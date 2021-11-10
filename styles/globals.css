@@ -36,8 +36,11 @@ h1 {
   text-align: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* main {
   background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
 } */
-
  
