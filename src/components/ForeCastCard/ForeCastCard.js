@@ -7,7 +7,7 @@ const ForeCastCard = ({ city, currentWeather, timeZone }) => {
     return (
         <div className={forecastCard}>
             <section className={cityBlock}>
-                <h2>San Francisco</h2>
+                <h2>{city}</h2>
                 <p>The local time for this area is {timeZone}</p>
             </section>
             <section className={weatherBlock}>
