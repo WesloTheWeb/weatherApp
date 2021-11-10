@@ -1,5 +1,4 @@
 .inputContainer {
-    border-radius: 10px;
     margin: 0 auto;
     text-align: center;
 }
@@ -7,6 +6,7 @@
 .inputContainer input {
     width: 50%;
     padding: .5rem;
+    border-radius: 15px;
 }
 
 .inputContainer input:focus {

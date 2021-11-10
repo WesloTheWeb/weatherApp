@@ -30,7 +30,7 @@ const LocationInput = (props) => {
         <div className={inputContainer}>
             <input
                 type="text"
-                placeholder="city, zip, state, or country"
+                placeholder="Search by a city name or a city's zip code"
                 onChange={e => setQuery(e.target.value)}
                 value={query}
                 onKeyPress={handleQuery} />
