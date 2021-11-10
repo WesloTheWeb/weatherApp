@@ -1,3 +1,25 @@
+# Weather App
+In an effort to improve and grow as a software engineer at work and on my freetime, this project was started on November 8th, 
+2021. I mainly wanted to instill some of the new habits and knowledge I gained at work, which includes, but not limited to:
+- Taking advantage of NextJS features and dynamic routing
+- Writing Unit Tests
+- Incorporating new techniques and act as a snapshot in time of my current project.
+
+Overall I am pretty happy about this project and can confidently say this will be a CI/CD (continous integration / continous deployment). The API I am using is well documented.
+
+## To-Do:
+Cool potential features:
+- ✔ <s>Accomplish main functionality of querying for weather related data</s>
+- Mobile responsiveness at some point.
+- Make release branch and live version of the site.
+- Smooth transitions to improve the UX flow.
+- Background change to the time of day and weather (may need to find royalty free asset).
+- A history users can shift through from latest searches.
+- Moving background or animations.
+- Distinctive fonts for typography.
+- An actual name for the weather app.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
