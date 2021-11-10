@@ -1,9 +1,20 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
-import Footer from '../src/components/Footer/Footer';
-import Forecast from '../src/containers/Forecast/ForeCast';
 import LocationInput from '../src/containers/LocationInput/LocationInput';
+import Forecast from '../src/containers/Forecast/ForeCast';
+import Footer from '../src/components/Footer/Footer';
+import { QueryContext } from '../src/context/QueryContext';
 
 export default function Home() {
+
+  const [query, setQuery] = useState(''); // For query input
+  const [weather, setWeather] = useState({}); // Values for locatiion
+
+  const providerValues = React.useMemo(() => ({
+    query, setQuery,
+    weather, setWeather,
+}), [query, weather]);
+  
   return (
     <div>
       <Head>
@@ -13,10 +24,12 @@ export default function Home() {
       </Head>
       <main>
         <h1> Welcome to the <br /><span className="title">Weather App</span></h1>
-        <p className="instructions">To use, simply enter a location on the input below and click the button or press 'enter' and the field should populate.</p>
-        <LocationInput />
-        <Forecast />
-        <Footer />
+        <p className="instructions">To use, simply enter a city or zipcode below and press enter.</p>
+        <QueryContext.Provider value={providerValues}>
+          <LocationInput />
+          <Forecast value={providerValues}/>
+        </QueryContext.Provider>
+          <Footer />
       </main>
     </div>
   )
