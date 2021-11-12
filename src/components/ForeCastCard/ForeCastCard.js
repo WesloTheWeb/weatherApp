@@ -5,7 +5,7 @@ const { forecastCard, cityBlock, weatherBlock, weatherBlockDetails } = classes;
 
 const ForeCastCard = (
     { city, state, country, weatherFahrenheight, weatherCelsius, feelsLikeF, feelsLikeC, timeZone, aqCarbonLevels,
-     aqOxygenLevels, humidity, visMiles, visKM }) => {
+        aqOxygenLevels, humidity, visMiles, visKM }) => {
     return (
         <div className={forecastCard}>
             <section className={cityBlock}>
@@ -20,7 +20,8 @@ const ForeCastCard = (
             <section className={weatherBlock}>
                 <h3>{weatherFahrenheight}°F | {weatherCelsius}°C</h3>
                 <div className={weatherBlockDetails}>
-                    <p><label>Air quality Index:</label>
+                    <p>
+                        <label>Air quality Index:</label>
                         <li>Carbon levels: {Math.round(aqCarbonLevels)} </li>
                         <li>Oxygen Levels levels: {Math.round(aqOxygenLevels)} </li>
                     </p>
