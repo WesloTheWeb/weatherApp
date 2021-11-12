@@ -48,6 +48,10 @@
     .weatherBlock {
         text-align: center;
     }    
+
+    .forecastCard .weatherBlock h3 {
+        font-size: 2rem;
+    }
 }
 
 .weatherBlock h3 {
@@ -58,6 +62,6 @@
 .weatherBlockDetails {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 15px;    
-    padding: 1.2rem;
+    padding: 0.25rem 1.2rem;
     margin: 1rem 0;
 }
