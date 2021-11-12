@@ -6,6 +6,12 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 769px) {
+    .forecastCard {
+        display: block;
+    }
+}
+
 .forecastCard p, .forecastCard h2, .forecastCard h3 {
     color: var(--white);
 }
@@ -15,16 +21,33 @@
     margin: 0;
 }
 
+@media only screen and (max-width: 769px) {
+    .forecastCard h2 {
+        font-size: 1.2rem;
+     }
+}
+
 .cityBlock {
     background-color: rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: .75rem 3rem;
     border-radius: 15px;    
-    /* linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
+}
+
+@media only screen and (max-width: 769px) {
+    .cityBlock {
+        padding: .75rem 1rem;
+     }
 }
 
 .weatherBlock {
     text-align: left;
+}
+
+@media only screen and (max-width: 769px) {
+    .weatherBlock {
+        text-align: center;
+    }    
 }
 
 .weatherBlock h3 {
