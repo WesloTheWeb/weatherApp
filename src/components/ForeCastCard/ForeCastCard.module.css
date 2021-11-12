@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1023px) {
     .forecastCard {
         display: block;
     }
@@ -21,7 +21,7 @@
     margin: 0;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1023px) {
     .forecastCard h2 {
         font-size: 1.2rem;
      }
@@ -34,7 +34,7 @@
     border-radius: 15px;    
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1023px) {
     .cityBlock {
         padding: .75rem 1rem;
      }
@@ -44,7 +44,7 @@
     text-align: left;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1023px) {
     .weatherBlock {
         text-align: center;
     }    
