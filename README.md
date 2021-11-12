@@ -10,8 +10,8 @@ Overall I am pretty happy about this project and can confidently say this will b
 ## To-Do:
 Cool potential features:
 - ✔ <s>Accomplish main functionality of querying for weather related data</s>
-- Mobile responsiveness at some point.
-- Make release branch and live version of the site.
+- ✔ <s>Mobile responsiveness at some point.</s>
+- ✔ <s>Make release branch and live version of the site.</s>
 - Smooth transitions to improve the UX flow.
 - Background change to the time of day and weather (may need to find royalty free asset).
 - A history users can shift through from latest searches.
