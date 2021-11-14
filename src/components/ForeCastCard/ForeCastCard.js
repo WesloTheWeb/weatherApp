@@ -12,7 +12,7 @@ const ForeCastCard = (
                 <h2>{city}, {state}</h2>
                 <span>{country}</span>
                 <div>
-                    <p>The local time for this area is {timeZone}. Visibility is currently {visMiles} miles / {visKM} kilometers</p>
+                    <p>The local date and time for this area is {timeZone}. Visibility is currently {visMiles} miles / {visKM} kilometers</p>
                     <h4>Feels like...</h4>
                     <p>{feelsLikeF}°F | {feelsLikeC}°C</p>
                 </div>

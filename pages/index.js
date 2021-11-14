@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <h1> Welcome to the <br /><span className="title">Weather App</span></h1>
-        <p className="instructions">To use, simply enter a city or zipcode below and press enter.</p>
+        <p className="instructions">To use, simply enter a city or zip code below and press enter.</p>
         <QueryContext.Provider value={providerValues}>
           <LocationInput />
           <Forecast value={providerValues}/>

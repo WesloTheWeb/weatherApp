@@ -8,5 +8,4 @@ const Instructions = (props) => {
     );
 };
 
-
 export default Instructions;

@@ -16,7 +16,7 @@ const LocationInput = (props) => {
 
     const handleQuery = (evnt) => {
         if (evnt.key === 'Enter') {
-            fetch(`${api.baseURL}current.json?key=${api.apiKey}&q=${query}}&aqi=yes`)
+            fetch(`${api.baseURL}forecast.json?key=${api.apiKey}&q=${query}}&aqi=yes`)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
