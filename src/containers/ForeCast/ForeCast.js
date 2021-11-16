@@ -8,7 +8,7 @@ import classes from './ForeCast.module.css';
 
 const { forecastContainer, upcomingGrid } = classes;
 
-const Forecast = (props) => {
+const ForeCast = (props) => {
 
     const { weather } = useContext(QueryContext);
 
@@ -57,4 +57,4 @@ const Forecast = (props) => {
     );
 };
 
-export default Forecast;
+export default ForeCast;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import LocationInput from '../src/containers/LocationInput/LocationInput';
-import Forecast from '../src/containers/ForeCast/ForeCast';
+import ForeCast from '../src/containers/ForeCast/ForeCast';
 import Footer from '../src/components/Footer/Footer';
 import { QueryContext } from '../src/context/QueryContext';
 
@@ -27,7 +27,7 @@ export default function Home() {
         <p className="instructions">To use, simply enter a city or zip code below and press enter.</p>
         <QueryContext.Provider value={providerValues}>
           <LocationInput />
-          <Forecast value={providerValues}/>
+          <ForeCast value={providerValues}/>
         </QueryContext.Provider>
           <Footer />
       </main>
