@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import LocationInput from '../src/containers/LocationInput/LocationInput';
-import Forecast from '../src/containers/Forecast/ForeCast';
+import Forecast from '../src/containers/ForeCast/ForeCast';
 import Footer from '../src/components/Footer/Footer';
 import { QueryContext } from '../src/context/QueryContext';
 

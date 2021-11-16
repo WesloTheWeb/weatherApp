@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { QueryContext } from '../../context/QueryContext';
 import Instructions from '../../components/Instructions/Instructions';
-import ForeCastCard from '../../components/ForecastCard/ForecastCard';
+import ForeCastCard from '../../components/ForeCastCard/ForeCastCard';
 import classes from './ForeCast.module.css';
 
 // import UpcomingForeCastCard from '../../components/UpcomingForceCastCard/UpcomingForeCastCard';
