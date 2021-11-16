@@ -8,7 +8,7 @@ const LocationInput = (props) => {
 
     const api = {
         apiKey: process.env.REACT_APP_WEATHER_KEY,
-        baseURL: "http://api.weatherapi.com/v1/",
+        baseURL: "https://api.weatherapi.com/v1/",
         q: 53222,
     }
 
