@@ -28,8 +28,8 @@ const ForeCast = (props) => {
                         conditionImg={weather.current.condition.icon}
                         convertTime={convertTime}
                         state={weather.location.region}
-                        sunrise={location.astronomy.astro.sunrise}
-                        sunset={location.astronomy.astro.sunset}
+                        sunrise={location.astronomy?.astro.sunrise}
+                        sunset={location.astronomy?.astro.sunset}
                         country={weather.location.country}
                         weatherFahrenheight={weather.current.temp_f}
                         weatherCelsius={weather.current.temp_c}
@@ -44,7 +44,7 @@ const ForeCast = (props) => {
                     />
                     <div className={upcomingGrid}>
                         <HourlyCard
-                            chance={weather.forecast.forecastday}
+                            forecast={weather.forecast.forecastday}
                             convertTime={convertTime}
                         />
                         {/* <UpcomingForeCastCard /> 
