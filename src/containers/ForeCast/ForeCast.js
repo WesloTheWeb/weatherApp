@@ -9,6 +9,11 @@ import HourlyCard from '../../components/HourlyCard/HourlyCard';
 
 const { forecastContainer, upcomingGrid } = classes;
 
+const convertTime = (time) => {
+    // TODO convert substring of first two element to convert from military time to regular
+    return time.slice(10)
+};
+
 const ForeCast = (props) => {
 
     const { weather, location } = useContext(QueryContext);
@@ -21,6 +26,7 @@ const ForeCast = (props) => {
                         city={weather.location.name}
                         conditions={weather.current.condition.text}
                         conditionImg={weather.current.condition.icon}
+                        convertTime={convertTime}
                         state={weather.location.region}
                         sunrise={location.astronomy.astro.sunrise}
                         sunset={location.astronomy.astro.sunset}
@@ -37,7 +43,10 @@ const ForeCast = (props) => {
                         visKM={weather.current.vis_km}
                     />
                     <div className={upcomingGrid}>
-                        <HourlyCard chance={weather.forecast.forecastday} />
+                        <HourlyCard
+                            chance={weather.forecast.forecastday}
+                            convertTime={convertTime}
+                        />
                         {/* <UpcomingForeCastCard /> 
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
