@@ -24,9 +24,7 @@ const LocationInput = (props) => {
     //     });
     // }, []);
 
-    //TODO: Make separate call link for astronmoy
-
-    const { setQuery, query, setWeather, setLocation, location } = useContext(QueryContext);
+    const { setQuery, query, setWeather, setLocation } = useContext(QueryContext);
 
     const handleQuery = (evnt) => {
         if (evnt.key === 'Enter') {
@@ -37,11 +35,11 @@ const LocationInput = (props) => {
                     setQuery('');
                     console.log(result);
                 });
-            fetch('https://api.weatherapi.com/v1/astronomy.json?key=198d594d4a1b41de9fb222710210811&q=53222&dt=2022-08-20')
+            fetch(`https://api.weatherapi.com/v1/astronomy.json?key=${api.apiKey}&q=${query}&dt=2022-08-20`)
                 .then(res => res.json())
                 .then(results => {
-                    // setLocation(results);
-                    console.log(results);
+                    setLocation(results);
+                    // console.log(results);
                 });
         }
     };

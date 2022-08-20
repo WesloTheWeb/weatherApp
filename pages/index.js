@@ -9,11 +9,13 @@ export default function Home() {
 
   const [query, setQuery] = useState(''); // For query input
   const [weather, setWeather] = useState({}); // Values for locatiion
+  const [location, setLocation] = useState({});
 
   const providerValues = React.useMemo(() => ({
     query, setQuery,
     weather, setWeather,
-}), [query, weather]);
+    location, setLocation
+}), [query, weather, location]);
   
   return (
     <div>

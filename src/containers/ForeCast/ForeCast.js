@@ -5,6 +5,7 @@ import ForeCastCard from '../../components/ForeCastCard/ForeCastCard';
 import classes from './ForeCast.module.css';
 
 import UpcomingForeCastCard from '../../components/UpcomingForceCastCard/UpcomingForeCastCard';
+import HourlyCard from '../../components/HourlyCard/HourlyCard';
 
 const { forecastContainer, upcomingGrid } = classes;
 
@@ -12,7 +13,6 @@ const ForeCast = (props) => {
 
     const { weather, location } = useContext(QueryContext);
 
-    console.log('###')
     return (
         <section className={forecastContainer}>
             {(typeof weather.location != 'undefined') ? (
@@ -22,8 +22,8 @@ const ForeCast = (props) => {
                         conditions={weather.current.condition.text}
                         conditionImg={weather.current.condition.icon}
                         state={weather.location.region}
-                        // sunrise={location.astronomy.astro.sunrise}
-                        // sunset={weather.astronomy.astro.sunset}
+                        sunrise={location.astronomy.astro.sunrise}
+                        sunset={location.astronomy.astro.sunset}
                         country={weather.location.country}
                         weatherFahrenheight={weather.current.temp_f}
                         weatherCelsius={weather.current.temp_c}
@@ -36,7 +36,9 @@ const ForeCast = (props) => {
                         visMiles={weather.current.vis_miles}
                         visKM={weather.current.vis_km}
                     />
-                    {/* <div className={upcomingGrid}>
+                    <div className={upcomingGrid}>
+                        <HourlyCard chance={weather.forecast.forecastday} />
+                        {/* <UpcomingForeCastCard /> 
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
@@ -49,9 +51,8 @@ const ForeCast = (props) => {
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
-                        <UpcomingForeCastCard />
-                        <UpcomingForeCastCard />
-                    </div> */}
+                        <UpcomingForeCastCard />  */}
+                    </div>
                 </>
             ) : (
                 <Instructions />

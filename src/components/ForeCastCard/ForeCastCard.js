@@ -3,6 +3,10 @@ import classes from './ForeCastCard.module.css';
 
 const { forecastCard, cityBlock, conditionContainer, weatherBlock, weatherBlockDetails } = classes;
 
+const converTime = (time) => {
+    
+}
+
 const ForeCastCard = (
     { city, state, country, conditions, conditionImg, weatherFahrenheight, weatherCelsius, feelsLikeF, feelsLikeC, timeZone, aqCarbonLevels, sunrise, sunset,
         aqOxygenLevels, humidity, visMiles, visKM }) => {
@@ -12,14 +16,16 @@ const ForeCastCard = (
                 <h2>{city}, {state}</h2>
                 <span>{country}</span>
                 <div>
-                    <p>The local date and time for this area is {timeZone.toString()} . Visibility is currently {visMiles} miles / {visKM} kilometers</p>
+                    <div>
+                        The local date and time for this area is {timeZone} . Visibility is currently {visMiles} miles / {visKM} kilometers
+                        <p>Sunrise is at {sunrise} </p>
+                        <p>Sunset is at {sunset}</p>
+                    </div>
                     <h4>Feels like...</h4>
                     <p>{feelsLikeF}°F | {feelsLikeC}°C</p>
                     <div className={conditionContainer}>
                         <p>Current conditions: <b>{conditions}</b></p>
                         <img src={`${conditionImg}`} alt="clouds" />
-                        <p>Sunrise is at {sunrise} </p>
-                        <p>Sunset is at {sunset}</p>
                     </div>
                 </div>
             </section>
