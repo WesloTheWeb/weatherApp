@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { QueryContext } from '../../context/QueryContext';
 import classes from './LocationInput.module.css';
 
@@ -12,7 +12,21 @@ const LocationInput = (props) => {
         q: 53222,
     }
 
-    const { setQuery, query, setWeather } = useContext(QueryContext);
+    // useEffect(() => {
+    //     // Update the document title using the browser API
+    //     // fetch(`${api.baseURL}forecast.json?key=${api.apiKey}&q=53222}&aqi=yes`)
+    //     fetch('https://api.weatherapi.com/v1/astronomy.json?key=198d594d4a1b41de9fb222710210811&q=53222&dt=2022-08-20')
+    //     .then(res => res.json())
+    //     .then(result => {
+    //         setWeather(result);
+    //         setQuery('');
+    //         console.log(result);
+    //     });
+    // }, []);
+
+    //TODO: Make separate call link for astronmoy
+
+    const { setQuery, query, setWeather, setLocation, location } = useContext(QueryContext);
 
     const handleQuery = (evnt) => {
         if (evnt.key === 'Enter') {
@@ -23,6 +37,12 @@ const LocationInput = (props) => {
                     setQuery('');
                     console.log(result);
                 });
+            fetch('https://api.weatherapi.com/v1/astronomy.json?key=198d594d4a1b41de9fb222710210811&q=53222&dt=2022-08-20')
+                .then(res => res.json())
+                .then(results => {
+                    // setLocation(results);
+                    console.log(results);
+                });
         }
     };
 
@@ -30,7 +50,7 @@ const LocationInput = (props) => {
         <div className={inputContainer}>
             <input
                 type="text"
-                placeholder="Search by a city name or a city's zip code"
+                placeholder="Search by a city name or zip code"
                 onChange={e => setQuery(e.target.value)}
                 value={query}
                 onKeyPress={handleQuery} />

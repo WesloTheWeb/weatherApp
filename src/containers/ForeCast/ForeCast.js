@@ -4,21 +4,26 @@ import Instructions from '../../components/Instructions/Instructions';
 import ForeCastCard from '../../components/ForeCastCard/ForeCastCard';
 import classes from './ForeCast.module.css';
 
-// import UpcomingForeCastCard from '../../components/UpcomingForceCastCard/UpcomingForeCastCard';
+import UpcomingForeCastCard from '../../components/UpcomingForceCastCard/UpcomingForeCastCard';
 
 const { forecastContainer, upcomingGrid } = classes;
 
 const ForeCast = (props) => {
 
-    const { weather } = useContext(QueryContext);
+    const { weather, location } = useContext(QueryContext);
 
+    console.log('###')
     return (
         <section className={forecastContainer}>
             {(typeof weather.location != 'undefined') ? (
                 <>
                     <ForeCastCard
                         city={weather.location.name}
+                        conditions={weather.current.condition.text}
+                        conditionImg={weather.current.condition.icon}
                         state={weather.location.region}
+                        // sunrise={location.astronomy.astro.sunrise}
+                        // sunset={weather.astronomy.astro.sunset}
                         country={weather.location.country}
                         weatherFahrenheight={weather.current.temp_f}
                         weatherCelsius={weather.current.temp_c}
