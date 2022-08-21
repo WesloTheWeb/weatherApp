@@ -13,7 +13,7 @@ Cool potential features:
 - ✔ <s>Mobile responsiveness at some point.</s>
 - ✔ <s>Make release branch and live version of the site.</s>
 - Smooth transitions to improve the UX flow.
-- Background change to the time of day and weather (may need to find royalty free asset).
+- ✔ <s>Background change to the time of day and weather (may need to find royalty free asset).</s>
 - A history users can shift through from latest searches.
 - Moving background or animations.
 - Distinctive fonts for typography.
