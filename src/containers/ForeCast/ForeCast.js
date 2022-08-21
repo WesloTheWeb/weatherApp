@@ -8,10 +8,7 @@ import UpcomingForeCastCard from '../../components/UpcomingForceCastCard/Upcomin
 import HourlyCard from '../../components/HourlyCard/HourlyCard';
 
 const { forecastContainer, upcomingGrid } = classes;
-
-const convertTime = (time) => {
-    return time.slice(10)
-};
+var convertTime = require('convert-time');
 
 const ForeCast = () => {
 
@@ -43,7 +40,7 @@ const ForeCast = () => {
                     />
                     <div className='text-center information-block'>
                         <h3 >Hourly Breakdown</h3>
-                        <p>Below is the breakdown of the weather today in military time.</p>
+                        <p>Below is the breakdown of the weather today.</p>
                     </div>
                     <div className={upcomingGrid}>
                         {weather.forecast.forecastday[0].hour.map((currentDay, idx) => {
