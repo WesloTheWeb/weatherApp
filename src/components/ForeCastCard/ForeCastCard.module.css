@@ -1,3 +1,7 @@
+.conditionContainer {
+    display: flex;
+}
+
 .forecastCard {
     display: flex;
     justify-content: space-between;
