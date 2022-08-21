@@ -14,6 +14,12 @@ const convertTime = (time) => {
     return time.slice(10)
 };
 
+const convertPresentTime = (time) => {
+    const newStr = time.split(' ');
+    return newStr.slice(4, 5)
+}
+
+
 const ForeCast = (props) => {
 
     const { weather, location } = useContext(QueryContext);
@@ -42,11 +48,28 @@ const ForeCast = (props) => {
                         visMiles={weather.current.vis_miles}
                         visKM={weather.current.vis_km}
                     />
+                    <h3 className='text-center'>Hourly Breakdown</h3>
                     <div className={upcomingGrid}>
-                        <HourlyCard
-                            forecast={weather.forecast.forecastday}
-                            convertTime={convertTime}
-                        />
+                        {weather.forecast.forecastday[0].hour.map((currentDay, idx) => {
+                            console.log(convertTime(currentDay.time))
+                            return (
+                                // <div>
+                                //     {console.log(currentDay.time)}
+                                // </div>
+                                <HourlyCard
+                                    forecast={weather.forecast.forecastday}
+                                    convertTime={convertTime}
+                                    hour={currentDay.time}
+                                    fahTemperature={currentDay.temp_f}
+                                    celTemperature={currentDay.temp_c}
+                                    rain={currentDay}
+                                    key={idx}
+                                />
+                            )
+                        })
+                        }
+
+
                         {/* <UpcomingForeCastCard /> 
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />
