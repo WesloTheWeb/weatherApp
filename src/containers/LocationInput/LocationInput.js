@@ -12,18 +12,6 @@ const LocationInput = (props) => {
         q: 53222,
     }
 
-    // useEffect(() => {
-    //     // Update the document title using the browser API
-    //     // fetch(`${api.baseURL}forecast.json?key=${api.apiKey}&q=53222}&aqi=yes`)
-    //     fetch('https://api.weatherapi.com/v1/astronomy.json?key=198d594d4a1b41de9fb222710210811&q=53222&dt=2022-08-20')
-    //     .then(res => res.json())
-    //     .then(result => {
-    //         setWeather(result);
-    //         setQuery('');
-    //         console.log(result);
-    //     });
-    // }, []);
-
     const { setQuery, query, setWeather, setLocation } = useContext(QueryContext);
 
     const handleQuery = (evnt) => {
