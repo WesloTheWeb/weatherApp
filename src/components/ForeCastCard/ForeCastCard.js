@@ -13,7 +13,7 @@ const ForeCastCard = (
                 <span>{country}</span>
                 <div>
                     <div>
-                        The local date and time for this area is {convertTime(timeZone)} . Visibility is currently {visMiles} miles / {visKM} kilometers
+                        The local time for this area is {convertTime(timeZone)} . Visibility is currently {visMiles} miles / {visKM} kilometers
                         <p>Sunrise is at {sunrise} </p>
                         <p>Sunset is at {sunset}</p>
                     </div>

@@ -3,7 +3,7 @@ import classes from './HourlyCard.module.css';
 
 const { CardContainer } = classes;
 
-const HourlyCard = ({ forecast, convertTime, hour, celTemperature, fahTemperature, idx }) => {
+const HourlyCard = ({ cloud, convertTime, hour, icon, altIcon, celTemperature, fahTemperature, rain, snow, windDir, wind }) => {
     return (
         <div className={CardContainer}>
             <label>
@@ -13,14 +13,13 @@ const HourlyCard = ({ forecast, convertTime, hour, celTemperature, fahTemperatur
                     {fahTemperature} &deg;F
                     | {celTemperature} &deg;C
                 </p>
-                <img src={`${forecast[0].hour[5].condition.icon}`} alt={`${forecast[0].hour[5].condition.text}`} />
+                <img src={`${icon}`} alt={`${altIcon}`} />
             </div>
-            <p>Chance of rain: {forecast[0].hour[5].chance_of_rain}%</p>
-            <p>Chance of snow: {forecast[0].hour[5].chance_of_snow}%</p>
-            <p>Wind-direction: {forecast[0].hour[5].wind_dir}</p>
-            <p>Wind mph: {forecast[0].hour[5].wind_mph}</p>
-            <p>Cloud: {forecast[0].hour[5].cloud}% coverage</p>
-            <p>{hour}</p>
+            <p>Chance of rain: {rain}%</p>
+            <p>Chance of snow: {snow}%</p>
+            <p>Wind-direction: {windDir}</p>
+            <p>Wind mph: {wind}</p>
+            <p>Cloud: {cloud}% coverage</p>
         </div>
     );
 };

@@ -10,17 +10,10 @@ import HourlyCard from '../../components/HourlyCard/HourlyCard';
 const { forecastContainer, upcomingGrid } = classes;
 
 const convertTime = (time) => {
-    // TODO convert substring of first two element to convert from military time to regular
     return time.slice(10)
 };
 
-const convertPresentTime = (time) => {
-    const newStr = time.split(' ');
-    return newStr.slice(4, 5)
-}
-
-
-const ForeCast = (props) => {
+const ForeCast = () => {
 
     const { weather, location } = useContext(QueryContext);
 
@@ -48,28 +41,31 @@ const ForeCast = (props) => {
                         visMiles={weather.current.vis_miles}
                         visKM={weather.current.vis_km}
                     />
-                    <h3 className='text-center'>Hourly Breakdown</h3>
+                    <div className='text-center'>
+                        <h3 >Hourly Breakdown</h3>
+                        <p>Below is the breakdown of the weather today in military time.</p>
+                    </div>
                     <div className={upcomingGrid}>
                         {weather.forecast.forecastday[0].hour.map((currentDay, idx) => {
-                            console.log(convertTime(currentDay.time))
                             return (
-                                // <div>
-                                //     {console.log(currentDay.time)}
-                                // </div>
                                 <HourlyCard
+                                    key={idx}
                                     forecast={weather.forecast.forecastday}
+                                    cloud={currentDay.cloud}
                                     convertTime={convertTime}
                                     hour={currentDay.time}
+                                    icon={currentDay.condition.icon}
+                                    altIcon={currentDay.condition.text}
                                     fahTemperature={currentDay.temp_f}
                                     celTemperature={currentDay.temp_c}
-                                    rain={currentDay}
-                                    key={idx}
+                                    rain={currentDay.chance_of_rain}
+                                    snow={currentDay.chance_of_snow}
+                                    windDir={currentDay.wind_dir}
+                                    wind={currentDay.wind_mph}
                                 />
-                            )
+                            );
                         })
                         }
-
-
                         {/* <UpcomingForeCastCard /> 
                         <UpcomingForeCastCard />
                         <UpcomingForeCastCard />

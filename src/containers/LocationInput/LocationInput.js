@@ -33,7 +33,7 @@ const LocationInput = (props) => {
                 .then(result => {
                     setWeather(result);
                     setQuery('');
-                    console.log(result);
+                    // console.log(result);
                 });
             fetch(`https://api.weatherapi.com/v1/astronomy.json?key=${api.apiKey}&q=${query}&dt=2022-08-20`)
                 .then(res => res.json())
