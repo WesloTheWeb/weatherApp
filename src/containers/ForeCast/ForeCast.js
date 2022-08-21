@@ -41,7 +41,7 @@ const ForeCast = () => {
                         visMiles={weather.current.vis_miles}
                         visKM={weather.current.vis_km}
                     />
-                    <div className='text-center'>
+                    <div className='text-center information-block'>
                         <h3 >Hourly Breakdown</h3>
                         <p>Below is the breakdown of the weather today in military time.</p>
                     </div>
